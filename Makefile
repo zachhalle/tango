@@ -10,10 +10,10 @@ NATIVE = $(MAIN).native
 PROFILE = $(MAIN).p.native
 TOPLEVEL = $(MAIN).top
 
-all: c0c
+all: tangoc
 
-c0c: bin/c0c
-bin/c0c: native
+tangoc: bin/tangoc
+bin/tangoc: native
 	mkdir -p bin
 	install $(NATIVE) $@
 
@@ -40,4 +40,4 @@ clean:
 
 always:
 
-.PHONY: c0c debug native top clean always
+.PHONY: tangoc debug native top clean always
