@@ -26,9 +26,10 @@ type exp =
  | ConstExp of Int32.t
  | PreOp of preop * exp
  | BinOp of binop * exp * exp
+ | Bind of ident * exp * exp
 
 type gdecl =
-  GBinding of string * exp
+  GBind of string * exp
 
 type program = gdecl list
 
